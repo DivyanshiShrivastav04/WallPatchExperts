@@ -159,50 +159,109 @@
             <div class="form-wrapper">
                 <h2>Get Your Free Quote Today</h2>
                 <p>Tell us about your wall repair needs and get connected with local experts</p>
-                <form class="quote-form" id="home-quote-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="firstName">First Name *</label>
-                            <input type="text" id="firstName" name="firstName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Last Name *</label>
-                            <input type="text" id="lastName" name="lastName" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="zipCode">ZIP Code *</label>
-                        <input type="text" id="zipCode" name="zipCode" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="serviceType">Type of Repair *</label>
-                        <select id="serviceType" name="serviceType" required>
-                            <option value="">Select repair type</option>
-                            <option value="crack-repair">Crack Repair</option>
-                            <option value="hole-patching">Hole Patching</option>
-                            <option value="dent-repair">Dent Repair</option>
-                            <option value="texture-matching">Texture Matching</option>
-                            <option value="water-damage">Water Damage Repair</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="description">Describe the damage</label>
-                        <textarea id="description" name="description" rows="4"
-                            placeholder="Please describe the wall damage, size, location, and any other relevant details..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-full">Get My Free Quote</button>
-                </form>
+              <form class="quote-form" id="home-quote-form">
+    <div class="form-row">
+        <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="lastName" required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone *</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="zipCode">ZIP Code *</label>
+        <input type="text" id="zipCode" name="zipCode" required>
+    </div>
+    <div class="form-group">
+        <label for="serviceType">Type of Repair *</label>
+        <select id="serviceType" name="serviceType" required>
+            <option value="">Select repair type</option>
+            <option value="crack-repair">Crack Repair</option>
+            <option value="hole-patching">Hole Patching</option>
+            <option value="dent-repair">Dent Repair</option>
+            <option value="texture-matching">Texture Matching</option>
+            <option value="water-damage">Water Damage Repair</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="description">Describe the damage</label>
+        <textarea id="description" name="description" rows="4"
+            placeholder="Please describe the wall damage, size, location, and any other relevant details..."></textarea>
+    </div>
+
+    <!-- Checkbox -->
+   <div class="form-group" style="margin:15px 0;">
+  <label class="custom-check">
+    <input type="checkbox" name="agree" required>
+    <span class="checkmark"></span>
+    I agree to the <a href="#" style="color:#f36d21;text-decoration:none;">terms & conditions</a>
+  </label>
+</div>
+<style>
+/* Custom checkbox container */
+.custom-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Hide default checkbox */
+.custom-check input {
+  display: none;
+}
+
+/* Create custom box */
+.checkmark {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #f36d21;
+  border-radius: 3px;
+  position: relative;
+  background: #fff;
+}
+
+/* Create tick */
+.checkmark::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid #f36d21;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Show tick when checked */
+.custom-check input:checked + .checkmark::after {
+  opacity: 1;
+}
+</style>
+
+    <button type="submit" class="btn btn-primary btn-full" 
+        style="background:linear-gradient(to right,#f36d21,#e65100);border:none;padding:12px 20px;border-radius:6px;color:#fff;font-weight:bold;font-size:16px;cursor:pointer;">
+        Get My Free Quote
+    </button>
+</form>
             </div>
         </div>
     </section>
